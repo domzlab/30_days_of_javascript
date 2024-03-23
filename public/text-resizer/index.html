@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<title>Text Resizer</title>
+				<style type="text/css">
+						body {
+								font-family: Helvetica, Arial, sans-serif;
+								font-size: 12px;
+						}
+						
+						h1 {
+								font-size: 1.5em;
+						}
+						
+						h2 {
+								font-size: 1.2em;
+						}
+						
+						h3 {
+								font-size: 1em;
+						}
+				</style>
+		</head>
+		<body>
+				<h1>Simple Text Resizer</h1>
+				<h2>H2 tag</h2>
+				<h3>H3 tag<h3>
+						
+				<button id="size-12">12</button>
+				<button id="size-14">14</button>
+				<button id="size-16">16</button>
+		</body>
+		<script type="text/javascript">
+						
+				function makeSizer(size) {
+						return function() {
+								document.body.style.fontSize = `${size}px`;
+						}
+				}
+				
+				[12, 14, 16].forEach(item => {
+						let size = makeSizer(item);
+						document.getElementById(`size-${item}`).onclick = size;
+				})
+				
+		</script>
+</html>
