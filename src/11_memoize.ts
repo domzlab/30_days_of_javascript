@@ -2,7 +2,7 @@ type Fn = (...params: number[]) => number
 
 function memoize(fn: Fn): Fn {
 
-    // a set used to record previously used arguments
+    // a map used to record previously used arguments
     const previousArgs = new Map<string, number>();
     
     return function(...args) {
