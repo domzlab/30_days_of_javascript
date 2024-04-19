@@ -1,0 +1,85 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": 1,
+        "prettier/prettier": 2,
+        "indent": [
+            "error",
+            4,
+            {
+                "ignoredNodes": [
+                    "ConditionalExpression *"
+                ],
+                "SwitchCase": 1
+            }
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "max-len": [
+            1,
+            {
+                "code": 150,
+                "tabWidth": 4
+            }
+        ],
+        "array-element-newline": "off",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ],
+        "quotes": "off",
+        "no-unused-vars": [
+            "warn"
+        ],
+        "no-useless-escape": [
+            "warn"
+        ],
+        "no-async-promise-executor": [
+            "warn"
+        ],
+        "no-prototype-builtins": [
+            "warn"
+        ],
+        "no-inner-declarations": [
+            "warn"
+        ],
+        "no-duplicate-case": [
+            "warn"
+        ],
+        "no-redeclare": [
+            "warn"
+        ],
+        "no-constant-condition": [
+            "warn"
+        ],
+        "no-unreachable": [
+            "warn"
+        ],
+        "no-self-assign": [
+            "warn"
+        ]
+    },
+    "root": true,
+    "plugins": [
+        "prettier"
+    ]
+}
